@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 const userRoutes = require('./src/routes/carrera.routes');
-
+app.use(express.json());
 app.use('/carreras', userRoutes);
 
 app.listen(3000, () => {
